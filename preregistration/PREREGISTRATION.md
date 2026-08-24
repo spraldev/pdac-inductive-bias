@@ -107,6 +107,13 @@ All margins below are fixed here and reported as pre-set whether or not they are
 - Fallback: if PrimusV2 cannot be integrated and verified in week one, Primus v1 is used and
   the gap to published numbers reported. No fallback to hybrids (SwinUNETR, CoTr, nnFormer,
   TransUNet).
+- Version decision (2026-08-23): nnU-Net master now also ships `nnUNet_PrimusV3S_Trainer`
+  and recommends it as the new default. The transformer arm uses **PrimusV2**, not V3S.
+  Reason: the project's rationale for a pure-transformer arm rests on the published Primus/TMLR
+  benchmark showing PrimusV2 reaches parity with ResEnc-L; nnU-Net's own documentation
+  describes PrimusV3 as "a preliminary version" with no equivalent independent validation.
+  Switching would sever the study's stated grounding evidence. This choice is not revisited
+  after this point per the freeze-week rule.
 
 ## 6. Metrics and reporting
 
